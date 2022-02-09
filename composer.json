@@ -1,0 +1,26 @@
+{
+    "name": "imactool\/dssplat",
+    "description": "大华独立系统H8900平台接口",
+    "license": "MIT",
+    "keywords": [
+        "智慧园区综合管理平台",
+        "V3.001.0000004.8.R.1672347",
+        "支持大华H8900平台",
+        "大华本地部署"
+    ],
+    "authors": [
+        {
+            "name": "weslee",
+            "email": "chinauser1208@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.5",
+        "symfony/cache": "^4.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Imactool\\Dssplat\\": "src"
+        }
+    }
+}
