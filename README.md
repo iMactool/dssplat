@@ -2,7 +2,12 @@
 
 <p align="center"> 大华独立系统H8900平台接口.</p>
 
- 
+[![Latest Stable Version](http://poser.pugx.org/imactool/dssplat/v)](https://packagist.org/packages/imactool/dssplat) 
+[![Latest Unstable Version](http://poser.pugx.org/imactool/dssplat/v/unstable)](https://packagist.org/packages/imactool/dssplat) 
+[![License](http://poser.pugx.org/imactool/dssplat/license)](https://packagist.org/packages/imactool/dssplat) 
+[![PHP Version Require](http://poser.pugx.org/imactool/dssplat/require/php)](https://packagist.org/packages/imactool/dssplat)
+
+
 ## Installing
 
 ```shell
