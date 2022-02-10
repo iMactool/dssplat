@@ -5,12 +5,12 @@
  * Created by PhpStorm.
  * Copyright (c)  cc Inc. All rights reserved.
  * Desc: 代码功能描述
- *  ======================================================
+ *  ======================================================.
  */
+
 namespace Imactool\Dssplat\Core;
 
 use Imactool\Dssplat\Http\Http;
-use Imactool\Dssplat\Support\Config;
 
 class BaseService
 {
@@ -26,16 +26,18 @@ class BaseService
 
     public function setConfig($config)
     {
-        if (is_null(self::$config)){
+        if (is_null(self::$config)) {
             self::$config = $config;
-        }else{
-            self::$config = array_merge(self::$config,$config);
+        } else {
+            self::$config = array_merge(self::$config, $config);
         }
     }
 
     /**
-     * 以字符串 获取URL 参数
+     * 以字符串 获取URL 参数.
+     *
      * @return string
+     *
      * @author cc
      */
     protected function queryString()
@@ -44,18 +46,21 @@ class BaseService
     }
 
     /**
-     * 以数组形式 获取URL 参数
+     * 以数组形式 获取URL 参数.
+     *
      * @return array
+     *
      * @author cc
      */
     protected function queryArr(array $params = [])
     {
-        $arr =  [
+        $arr = [
             'userId'   => self::$config['userId'],
             'userName' => self::$config['loginName'],
-            'token'    => self::$config['token']
+            'token'    => self::$config['token'],
         ];
-        return array_merge($arr ,$params);
+
+        return array_merge($arr, $params);
     }
 
     public function headerJson()
@@ -70,10 +75,11 @@ class BaseService
 
     public function httpClient()
     {
-        if (!self::$client){
+        if (!self::$client) {
             self::$client = new Http();
             self::$client->setUrl($this->getUrl());
         }
+
         return self::$client;
     }
 
@@ -91,7 +97,7 @@ class BaseService
 //        $query = $this->generateParams($endpoint, $query);
         return $this->httpClient()->request('get', $endpoint, [
             'headers' => $headers,
-            'query' => $query,
+            'query'   => $query,
         ]);
     }
 
@@ -109,7 +115,7 @@ class BaseService
 //        $params = $this->generateParams($endpoint, $params);
 
         return $this->httpClient()->request('post', $endpoint, [
-            'header' => $headers,
+            'header'      => $headers,
             'form_params' => $params,
         ]);
     }
@@ -128,13 +134,11 @@ class BaseService
 //        $params = $this->generateParams($endpoint, $params);
         return $this->httpClient()->request('post', $endpoint, [
             'headers' => $headers,
-            'json' => $params,
+            'json'    => $params,
         ]);
     }
 
     public function encodeDataRsa()
     {
-
     }
-
 }
