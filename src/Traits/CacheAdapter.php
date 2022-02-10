@@ -5,7 +5,7 @@
  * Created by PhpStorm.
  * Copyright (c)  cc Inc. All rights reserved.
  * Desc: 代码功能描述
- *  ======================================================
+ *  ======================================================.
  */
 
 namespace Imactool\Dssplat\Traits;
@@ -19,9 +19,10 @@ trait CacheAdapter
 
     public static function getInstance()
     {
-        if (!self::$instance){
+        if (!self::$instance) {
             self::$instance = new FilesystemAdapter();
         }
+
         return self::$instance;
     }
 }

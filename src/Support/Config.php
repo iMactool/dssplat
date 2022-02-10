@@ -5,8 +5,9 @@
  * Created by PhpStorm.
  * Copyright (c)  cc Inc. All rights reserved.
  * Desc: 代码功能描述
- *  ======================================================
+ *  ======================================================.
  */
+
 namespace Imactool\Dssplat\Support;
 
 use ArrayAccess;
@@ -20,7 +21,7 @@ class Config implements ArrayAccess
         $this->config = $config;
     }
 
-    public function get($key ,$default = null)
+    public function get($key, $default = null)
     {
         $config = $this->config;
         if (isset($config[$key])) {
@@ -41,7 +42,7 @@ class Config implements ArrayAccess
         return $config;
     }
 
-    public function  offsetExists($offset)
+    public function offsetExists($offset)
     {
         return array_key_exists($offset, $this->config);
     }
@@ -64,5 +65,4 @@ class Config implements ArrayAccess
             unset($this->config[$offset]);
         }
     }
-
 }

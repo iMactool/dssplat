@@ -5,7 +5,7 @@
  * Created by PhpStorm.
  * Copyright (c)  cc Inc. All rights reserved.
  * Desc: 组织管理服务
- *  ======================================================
+ *  ======================================================.
  */
 
 namespace Imactool\Dssplat\Org;
@@ -17,7 +17,7 @@ class OrgProvider implements Provider
 {
     public function serviceProvider(Container $container)
     {
-        $container['Org'] = function (Container $container){
+        $container['Org'] = function (Container $container) {
             return new Org($container);
         };
     }

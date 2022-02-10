@@ -5,13 +5,13 @@
  * Created by PhpStorm.
  * Copyright (c)  cc Inc. All rights reserved.
  * Desc: 代码功能描述
- *  ======================================================
+ *  ======================================================.
  */
+
 namespace Imactool\Dssplat\Core;
 
 class Container implements \ArrayAccess
 {
-
     /**
      * 中间件.
      *

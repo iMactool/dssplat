@@ -5,8 +5,9 @@
  * Created by PhpStorm.
  * Copyright (c)  cc Inc. All rights reserved.
  * Desc: 代码功能描述
- *  ======================================================
+ *  ======================================================.
  */
+
 namespace Imactool\Dssplat\Http;
 
 use GuzzleHttp\Client;
@@ -59,6 +60,7 @@ class Http
     public function setUrl($url)
     {
         $this->baseUri = trim($url, '/').'/';
+
         return $this;
     }
 
@@ -66,5 +68,4 @@ class Http
     {
         return $this->baseUri;
     }
-
 }

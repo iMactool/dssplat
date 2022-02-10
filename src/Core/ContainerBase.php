@@ -5,11 +5,12 @@
  * Created by PhpStorm.
  * Copyright (c)  cc Inc. All rights reserved.
  * Desc: 代码功能描述
- *  ======================================================
+ *  ======================================================.
  */
+
 namespace Imactool\Dssplat\Core;
 
-class ContainerBase extends  Container
+class ContainerBase extends Container
 {
     protected $config;
 
